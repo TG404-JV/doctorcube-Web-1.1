@@ -1,0 +1,346 @@
+
+    .hero {
+        background: linear-gradient(135deg, #008B8B 0%, #006666 100%);
+        color: white;
+        padding: 70px 5%;
+        display: flex;
+        justify-content: space-between;
+        min-height: 600px;
+        position: relative;
+        overflow: hidden;
+        background-size: 100% 100%;
+    }
+
+    .hero::before {
+        background-color: #007777;
+        background-image: var(--bg-image, url(/img/dc_img/Doctorcubes.JPG));
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        opacity: 0.25;
+        z-index: 0;
+        transition: background-image 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    }
+
+    /* Fallback classes for each image */
+    .hero-bg-0::before { background-image: url(/img/dc_img/Doctorcubes.JPG); }
+    .hero-bg-1::before { background-image: url(/img/dc_img/Doctorcubes2.JPG); }
+    .hero-bg-2::before { background-image: url(/img/dc_img/Doctorcubes3.JPG); }
+    .hero-bg-3::before { background-image: url(/img/dc_img/Doctorcubes4.JPG); }
+    .hero-bg-4::before { background-image: url(/img/dc_img/Doctorcubes5.JPG); }
+    .hero-bg-5::before { background-image: url(/img/dc_img/Doctorcubes6.JPG); }
+    .hero-bg-6::before { background-image: url(/img/dc_img/Doctorcubes7.JPG); }
+    .hero-bg-7::before { background-image: url(/img/dc_img/Doctorcubes8.JPG); }
+    .hero-bg-8::before { background-image: url(/img/dc_img/Doctorcubes9.JPG); }
+    .hero-bg-9::before { background-image: url(/img/dc_img/Doctorcubes_office1.JPG); }
+    .hero-bg-10::before { background-image: url(/img/dc_img/Doctorcubes_office2.JPG); }
+    .hero-bg-11::before { background-image: url(/img/dc_img/Doctorcubes_office3.JPG); }
+
+    .hero-content {
+        flex: 1;
+        padding-top: 50px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .hero-content h1 {
+        font-size: 46px;
+        margin-bottom: 20px;
+        line-height: 1.2;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        color: #FFFFFF;
+    }
+
+    .hero-content h1 span {
+        color: #FFD700;
+        font-weight: bold;
+        position: relative;
+        display: inline-block;
+    }
+
+    .hero-content h1 span::after {
+        content: '';
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: #FFD700;
+        opacity: 0.4;
+    }
+
+    .country-flags {
+        display: flex;
+        gap: 15px;
+        margin: 30px 0;
+        align-items: center;
+        flex-wrap: wrap;
+        animation: fadeIn 1s ease-out 0.5s backwards;
+    }
+
+    .country-flags img {
+        width: 60px;
+        height: 40px;
+        object-fit: cover;
+        border: 2px solid rgba(255, 255, 255, 0.7);
+        border-radius: 4px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .country-flags img:hover {
+        transform: translateY(-8px) scale(1.05);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hero-text {
+        margin: 25px 0;
+        max-width: 550px;
+        font-size: 17px;
+        line-height: 1.8;
+        color: rgba(255, 255, 255, 0.9);
+        animation: fadeIn 1s ease-out 0.7s backwards;
+    }
+
+    .hero-features {
+        margin-top: 35px;
+        font-size: 15px;
+        background: rgba(255, 255, 255, 0.9);
+        color: #0288D1;
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 550px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 1s ease-out 0.9s backwards;
+    }
+
+    .hero-features li {
+        margin-bottom: 8px;
+        list-style-type: none;
+        padding-left: 25px;
+        position: relative;
+        color: #0288D1;
+    }
+
+    .hero-features li:before {
+        content: '✓';
+        color: #4FC3F7;
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-weight: bold;
+    }
+
+    .registration-form {
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        width: 380px;
+        color: #333;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        position: relative;
+        z-index: 2;
+        animation: fadeIn 1s ease-out 0.5s backwards;
+    }
+
+    .registration-form:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .registration-form h2 {
+        color: #008B8B;
+        font-size: 24px;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    .registration-form p {
+        color: #666;
+        font-size: 15px;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .form-input {
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    .form-input input, .form-input select {
+        width: 100%;
+        padding: 14px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 15px;
+        background-color: #f9f9f9;
+    }
+
+    .form-input input:focus, .form-input select:focus {
+        outline: none;
+        border-color: #008B8B;
+        box-shadow: 0 0 0 3px rgba(0, 139, 139, 0.1);
+        background-color: #fff;
+        transition: all 0.3s ease;
+    }
+
+    .submit-btn {
+        background: linear-gradient(to right, #008B8B, #006666);
+        color: white;
+        border: none;
+        padding: 14px 20px;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+        width: 100%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .submit-btn:hover {
+        background: linear-gradient(to right, #006666, #008B8B);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+        .hero {
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 5%;
+            min-height: auto;
+        }
+
+        .hero-content {
+            padding-top: 20px;
+            text-align: center;
+            max-width: 100%;
+        }
+
+        .hero-content h1 {
+            font-size: 36px;
+        }
+
+        .hero-text {
+            font-size: 16px;
+            max-width: 100%;
+        }
+
+        .hero-features {
+            max-width: 100%;
+            font-size: 14px;
+        }
+
+        .registration-form {
+            width: 100%;
+            max-width: 400px;
+            margin-top: 20px;
+        }
+
+        .country-flags {
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .hero {
+            padding: 30px 5%;
+        }
+
+        .hero-content h1 {
+            font-size: 28px;
+        }
+
+        .hero-text {
+            font-size: 14px;
+        }
+
+        .hero-features {
+            padding: 15px;
+            font-size: 13px;
+        }
+
+        .country-flags img {
+            width: 50px;
+            height: 33px;
+        }
+
+        .registration-form {
+            padding: 20px;
+        }
+
+        .registration-form h2 {
+            font-size: 20px;
+        }
+
+        .registration-form p {
+            font-size: 14px;
+        }
+
+        .form-input input, .form-input select {
+            padding: 12px;
+            font-size: 14px;
+        }
+
+        .submit-btn {
+            padding: 12px;
+            font-size: 15px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .hero {
+            padding: 20px 5%;
+        }
+
+        .hero-content h1 {
+            font-size: 24px;
+        }
+
+        .hero-text {
+            font-size: 13px;
+        }
+
+        .hero-features {
+            padding: 10px;
+            font-size: 12px;
+        }
+
+        .country-flags img {
+            width: 40px;
+            height: 27px;
+        }
+
+        .registration-form {
+            padding: 15px;
+        }
+
+        .registration-form h2 {
+            font-size: 18px;
+        }
+
+        .form-input input, .form-input select {
+            padding: 10px;
+            font-size: 13px;
+        }
+
+        .submit-btn {
+            padding: 10px;
+            font-size: 14px;
+        }
+    }
